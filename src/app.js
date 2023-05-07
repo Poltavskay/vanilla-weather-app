@@ -8,10 +8,6 @@ let minutes = date.getMinutes();
 if (minutes < 10) {
 minutes = `0${minutes}`;
 }
-
-
-
-
 let days = 
 ["Suunday",
  "Monday", 
@@ -24,10 +20,6 @@ let days =
 let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`;
 }
-
-
-
-
 function displayTemperature(response) {
     let  temperatureElement  = document.querySelector("#temperature");
     let  cityElement  = document.querySelector("#city");
@@ -46,7 +38,8 @@ function displayTemperature(response) {
 }  
 
 let apiKey = "e9d05d67840ff687d98500d573c2f838";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=e9d05d67840ff687d98500d573c2f838&units=metric`;
+let city = "Paris"
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e9d05d67840ff687d98500d573c2f838&units=metric`;
 
 
 
